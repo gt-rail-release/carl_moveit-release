@@ -117,14 +117,18 @@ void CarlMoveIt::moveToPose(const carl_moveit::MoveToPoseGoalConstPtr &goal)
     armGroup->setJointValueTarget(jointGoal);
     ROS_INFO("Planning and moving...");
     //armGroup->asyncMove();
-    bool moveSuccess = armGroup->move();
+    move_group_interface::MoveItErrorCode errorCode = armGroup->move();
     ROS_INFO("Finished plan and move");
-    if (moveSuccess)
+    if (errorCode == moveit_msgs::MoveItErrorCodes::SUCCESS)
+    {
       ROS_INFO("Succeeded");
+      result.success = true;
+    }
     else
-      ROS_INFO("Failed");
-
-    result.success = moveSuccess;
+    {
+      ROS_INFO("Failed with MoveIt error code: %d", errorCode.val);
+      result.success = false;
+    }
   }
   else
   {
@@ -167,13 +171,18 @@ void CarlMoveIt::moveToJointPose(const carl_moveit::MoveToJointPoseGoalConstPtr 
   armGroup->setJointValueTarget(jointGoal);
   ROS_INFO("Planning and moving...");
   //armGroup->asyncMove();
-  bool moveSuccess = armGroup->move();
-  if (moveSuccess)
-    ROS_INFO("Plan and move succeeded");
+  move_group_interface::MoveItErrorCode errorCode = armGroup->move();
+  ROS_INFO("Finished plan and move");
+  if (errorCode == moveit_msgs::MoveItErrorCodes::SUCCESS)
+  {
+    ROS_INFO("Succeeded");
+    result.success = true;
+  }
   else
-    ROS_INFO("Plan and move failed");
-
-  result.success = moveSuccess;
+  {
+    ROS_INFO("Failed with MoveIt error code: %d", errorCode.val);
+    result.success = false;
+  }
 
   moveToJointPoseServer.setSucceeded(result);
 }
@@ -303,7 +312,7 @@ bool CarlMoveIt::ikCallback(carl_moveit::CallIK::Request &req, carl_moveit::Call
   return true;
 }
 
-moveit_msgs::GetPositionIK::Response CarlMoveIt::callIK(geometry_msgs::Pose pose)
+moveit_msgs::GetPositionIK::Response CarlMoveIt::callIK(geometry_msgs::PoseStamped pose)
 {
   moveit_msgs::GetPositionIK::Request ikReq;
   moveit_msgs::GetPositionIK::Response ikRes;
@@ -314,8 +323,7 @@ moveit_msgs::GetPositionIK::Response CarlMoveIt::callIK(geometry_msgs::Pose pose
   //kinematicState->setVariableValues(jointState);
 
   ikReq.ik_request.group_name = "arm";
-  ikReq.ik_request.pose_stamped.header.frame_id = "base_footprint";
-  ikReq.ik_request.pose_stamped.pose = pose;
+  ikReq.ik_request.pose_stamped = pose;
   ikReq.ik_request.ik_link_name = "jaco_link_hand";
   //seed state
   ikReq.ik_request.robot_state.joint_state.name = jointModelGroup->getJointModelNames();
