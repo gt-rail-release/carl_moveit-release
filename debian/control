@@ -1,0 +1,12 @@
+Source: ros-indigo-carl-moveit
+Section: misc
+Priority: extra
+Maintainer: David Kent <davidkent@wpi.edu>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-actionlib, ros-indigo-actionlib-msgs, ros-indigo-carl-description, ros-indigo-catkin, ros-indigo-cmake-modules, ros-indigo-control-msgs, ros-indigo-geometry-msgs, ros-indigo-message-generation, ros-indigo-moveit-ros-planning-interface, ros-indigo-pcl-conversions, ros-indigo-pcl-ros, ros-indigo-rail-manipulation-msgs, ros-indigo-roscpp, ros-indigo-sensor-msgs, ros-indigo-std-msgs, ros-indigo-std-srvs, ros-indigo-tf, ros-indigo-wpi-jaco-msgs
+Homepage: http://ros.org/wiki/carl_moveit
+Standards-Version: 3.9.2
+
+Package: ros-indigo-carl-moveit
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-actionlib, ros-indigo-actionlib-msgs, ros-indigo-carl-description, ros-indigo-control-msgs, ros-indigo-geometry-msgs, ros-indigo-joint-state-publisher, ros-indigo-message-runtime, ros-indigo-moveit-planners-ompl, ros-indigo-moveit-ros-move-group, ros-indigo-moveit-ros-planning-interface, ros-indigo-pcl-conversions, ros-indigo-pcl-ros, ros-indigo-rail-manipulation-msgs, ros-indigo-robot-state-publisher, ros-indigo-roscpp, ros-indigo-sensor-msgs, ros-indigo-std-msgs, ros-indigo-std-srvs, ros-indigo-wpi-jaco-msgs, ros-indigo-xacro
+Description: MoveIt! Configuration and ROS Interface for CARL
