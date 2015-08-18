@@ -43,6 +43,8 @@ add_action_files(
   MoveToJointPose.action
   MoveToPose.action
   Pickup.action
+  Store.action
+  WipeSurface.action
 )
 
 ## Generate added messages and services with any dependencies listed here
@@ -73,7 +75,7 @@ include_directories(
 )
 
 ## Declare a cpp executable
-add_executable(carl_moveit_wrapper src/carl_moveit.cpp)
+add_executable(carl_moveit_wrapper src/carl_moveit.cpp include/carl_moveit/carl_moveit.h)
 add_executable(common_actions src/common_actions.cpp)
 
 ## Specify libraries to link a library or executable target against
