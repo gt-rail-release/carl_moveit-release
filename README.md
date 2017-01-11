@@ -1,3 +1,26 @@
+## carl_moveit (indigo) - 0.0.18-0
+
+The packages in the `carl_moveit` repository were released into the `indigo` distro by running `/usr/bin/bloom-release carl_moveit --track indigo --rosdistro indigo` on `Wed, 11 Jan 2017 19:21:08 -0000`
+
+The `carl_moveit` package was released.
+
+Version of package(s) in repository `carl_moveit`:
+
+- upstream repository: https://github.com/WPI-RAIL/carl_moveit.git
+- release repository: https://github.com/gt-rail-release/carl_moveit-release.git
+- rosdistro version: `0.0.17-0`
+- old version: `0.0.17-0`
+- new version: `0.0.18-0`
+
+Versions of tools used:
+
+- bloom version: `0.5.23`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.5`
+- rosdistro version: `0.4.7`
+- vcstools version: `0.1.38`
+
+
 ## carl_moveit (indigo) - 0.0.17-0
 
 The packages in the `carl_moveit` repository were released into the `indigo` distro by running `/usr/bin/bloom-release carl_moveit --track indigo --rosdistro indigo` on `Tue, 23 Feb 2016 18:51:41 -0000`
