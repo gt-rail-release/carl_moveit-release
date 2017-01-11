@@ -1,0 +1,199 @@
+ros-indigo-carl-moveit (0.0.18-0trusty) trusty; urgency=high
+
+  * Updated for new version of rail_manipulation_msgs
+  * Contributors: David Kent, Russell Toris
+
+ -- David Kent <dekent@gatech.edu>  Wed, 11 Jan 2017 05:00:00 -0000
+
+ros-indigo-carl-moveit (0.0.17-0trusty) trusty; urgency=high
+
+  * Update .travis.yml
+  * Update .travis.yml
+  * Update README.md
+  * Update package.xml
+  * Merge branch 'develop' of github.com:WPI-RAIL/carl_moveit into develop
+  * Consolidated some messages with rail_manipulation_msgs
+  * Contributors: David Kent
+
+ -- David Kent <dekent@gatech.edu>  Tue, 23 Feb 2016 05:00:00 -0000
+
+ros-indigo-carl-moveit (0.0.16-0trusty) trusty; urgency=high
+
+  * Added store pose to the store action, instead of hardcoding it to CARL's storage platform
+  * re-enabled collision object generation from segmented objects
+  * Moved obtain object to carl_demos, as it probably won't be re-used anywhere
+  * adjusted wiping motion
+  * changed wiping motion
+  * changed wiping motion
+  * updated gripper orientation
+  * started wipe server
+  * Added wipe surface action
+  * Updated store action
+  * Debugging store action
+  * Debugging store action.
+  * Added a pickup action where an object name can be specified
+  * Detached picked up objects on store action execution
+  * store bug fix
+  * store bug fix
+  * Added store action for storing objects in a container on CARL's platform
+  * Update .travis.yml
+  * Contributors: David Kent, Russell Toris
+
+ -- David Kent <davidkent@wpi.edu>  Tue, 18 Aug 2015 04:00:00 -0000
+
+ros-indigo-carl-moveit (0.0.15-0trusty) trusty; urgency=high
+
+  * Merge branch 'develop' of github.com:WPI-RAIL/carl_moveit into develop
+  * Added feedback to arm actions, fixed a bug with pickup for objects in the map frame
+  * Contributors: David Kent
+
+ -- David Kent <davidkent@wpi.edu>  Wed, 29 Apr 2015 04:00:00 -0000
+
+ros-indigo-carl-moveit (0.0.14-0trusty) trusty; urgency=high
+
+  * Merge branch 'develop' of github.com:WPI-RAIL/carl_moveit into develop
+  * minor fixes
+  * Contributors: David Kent
+
+ -- David Kent <davidkent@wpi.edu>  Mon, 27 Apr 2015 04:00:00 -0000
+
+ros-indigo-carl-moveit (0.0.13-0trusty) trusty; urgency=high
+
+  * changelog reverted
+  * Merge branch 'develop' of github.com:WPI-RAIL/carl_moveit into develop
+  * changelog updated
+  * Added threshold for attaching scene objects to the robot end-effector
+  * Debug statement cleanup
+  * Approach angle fix
+  * Connected pickup action with scene object attaching
+  * Added fingers as allowable touch links for scene object attachment
+  * Merge branch 'develop' of github.com:WPI-RAIL/carl_moveit into develop
+  * Support for scene collision objects from segmented/recognized object data
+  * Contributors: David Kent, Russell Toris
+
+ -- David Kent <davidkent@wpi.edu>  Wed, 22 Apr 2015 04:00:00 -0000
+
+ros-indigo-carl-moveit (0.0.12-0trusty) trusty; urgency=high
+
+  * Scene object adjustment
+  * bug fix
+  * moveit planning scene collision object test
+  * Contributors: David Kent
+
+ -- David Kent <davidkent@wpi.edu>  Tue, 14 Apr 2015 04:00:00 -0000
+
+ros-indigo-carl-moveit (0.0.11-0trusty) trusty; urgency=high
+
+  * Removed some unnecessary output
+  * Clear octomap after the jaco arm homes using the kinova api
+  * Enabled clear_octomap service
+  * Contributors: David Kent
+
+ -- David Kent <davidkent@wpi.edu>  Fri, 03 Apr 2015 04:00:00 -0000
+
+ros-indigo-carl-moveit (0.0.10-0trusty) trusty; urgency=high
+
+  * Minor action renaming
+  * Updated method documentation
+  * Added grasp_joint to the arm planning group, bugfixes on pickup trajectory execution
+  * Added pickup action, changed end effector link to use jaco_link_eef instead of jaco_link_hand
+  * Contributors: David Kent
+
+ -- David Kent <davidkent@wpi.edu>  Tue, 31 Mar 2015 04:00:00 -0000
+
+ros-indigo-carl-moveit (0.0.9-0trusty) trusty; urgency=high
+
+  * Merge branch 'develop' of github.com:WPI-RAIL/carl_moveit into develop
+  * Changed the ready arm action to a general arm actions server which can currently either READY or RETRACT the arm
+  * Contributors: David Kent
+
+ -- David Kent <davidkent@wpi.edu>  Fri, 27 Mar 2015 04:00:00 -0000
+
+ros-indigo-carl-moveit (0.0.8-0trusty) trusty; urgency=high
+
+  * Updated IK and MoveToPose to use stamped poses instead of base_footprint frame poses
+  * Removed run dependency on moveit visualization
+  * Update CMakeLists.txt
+  * Update .travis.yml
+  * lift server start
+  * Planning-based hand lift
+  * Output message when arm is already retracted
+  * retract bug fix
+  * Added check if arm is already retracted before performing a home->retract action
+  * Cancel retract if home fails
+  * Better failure detection on joint pose goal planning and moving
+  * Merge branch 'develop' of github.com:WPI-RAIL/carl_moveit into develop
+  * Error code debugging on failed moveToPose
+  * Contributors: David Kent, Russell Toris
+
+ -- David Kent <davidkent@wpi.edu>  Tue, 24 Mar 2015 04:00:00 -0000
+
+ros-indigo-carl-moveit (0.0.7-0trusty) trusty; urgency=high
+
+  * Documentation
+  * Common action preemtion during retract
+  * Merge branch 'develop' of github.com:WPI-RAIL/carl_moveit into develop
+  * Common action preempting
+  * Update .travis.yml
+  * Contributors: David Kent, Russell Toris
+
+ -- David Kent <davidkent@wpi.edu>  Tue, 17 Feb 2015 05:00:00 -0000
+
+ros-indigo-carl-moveit (0.0.6-0trusty) trusty; urgency=high
+
+  * Updated launch file; changed preempted ready action behavior
+  * Common motion planning actions, such as readying and retracting the JACO arm
+  * Contributors: David Kent
+
+ -- David Kent <davidkent@wpi.edu>  Fri, 06 Feb 2015 05:00:00 -0000
+
+ros-indigo-carl-moveit (0.0.5-0trusty) trusty; urgency=high
+
+  * Merge branch 'develop' of github.com:WPI-RAIL/carl_moveit into develop
+  * Tuned jump threshold for Cartesian movement
+  * Update .travis.yml
+  * Update .travis.yml
+  * Update .travis.yml
+  * Update .travis.yml
+  * Contributors: David Kent, Russell Toris
+
+ -- David Kent <davidkent@wpi.edu>  Wed, 21 Jan 2015 05:00:00 -0000
+
+ros-indigo-carl-moveit (0.0.4-0trusty) trusty; urgency=high
+
+  * Launched carl_moveit_wrapper with full launch file
+  * Update .travis.yml
+  * Added Cartesian path planning, experimental Cartesian control using a Jacobian pseudoinverse, and some general cleanup
+  * Contributors: David Kent
+
+ -- David Kent <davidkent@wpi.edu>  Fri, 16 Jan 2015 05:00:00 -0000
+
+ros-indigo-carl-moveit (0.0.3-0trusty) trusty; urgency=high
+
+  * Merge pull request #1 from WPI-RAIL/master
+    Merge
+  * Merge branch 'master' of github.com:WPI-RAIL/carl_moveit
+  * minor changes with collisions
+  * Contributors: David Kent, Russell Toris
+
+ -- David Kent <davidkent@wpi.edu>  Tue, 02 Dec 2014 05:00:00 -0000
+
+ros-indigo-carl-moveit (0.0.2-0trusty) trusty; urgency=high
+
+  * missing dep added back
+  * Contributors: Russell Toris
+
+ -- David Kent <davidkent@wpi.edu>  Mon, 03 Nov 2014 05:00:00 -0000
+
+ros-indigo-carl-moveit (0.0.1-0trusty) trusty; urgency=high
+
+  * mongo fix
+  * travis test
+  * cleanup for release
+  * updates for pick and place
+  * initial commit
+  * Contributors: Russell Toris, dekent
+
+ -- David Kent <davidkent@wpi.edu>  Fri, 31 Oct 2014 04:00:00 -0000
+
+
