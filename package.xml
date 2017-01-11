@@ -1,10 +1,9 @@
 <package>
   <name>carl_moveit</name>
-  <version>0.0.17</version>
+  <version>0.0.18</version>
   <description>MoveIt! Configuration and ROS Interface for CARL</description>
 
   <maintainer email="dekent@gatech.edu">David Kent</maintainer>
-  <maintainer email="rctoris@wpi.edu">Russell Toris</maintainer>
   <author email="dekent@gatech.edu">David Kent</author>
 
   <license>BSD</license>
